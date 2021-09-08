@@ -1,0 +1,832 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    
+    width: 100%;
+    height: 100vh;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background: white;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul li{
+    margin: 0 10px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 21px;
+    letter-spacing: 2px;
+    padding: 5px 15px;
+}
+.logo{
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+nav ul li:after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: black;
+    margin: auto;
+    display: block;
+    transition: all 1s ease;
+
+}
+
+nav ul li:hover:after{
+    width: 100%;
+}
+
+.background-img{
+    position: absolute;
+    top: 22%;
+    left: 8%;
+    width: 85%;
+    height: 70%;
+    text-align: center;
+    background: none;
+    box-shadow: none;
+    z-index: 1;
+}
+.background-img h2, p{
+    position: relative;
+    top: -100%;
+}
+.background-img h2{
+    font-size: 50px;
+    animation: animate 1s ease;
+}
+
+@keyframes animate{
+    from{
+        left: -20%;
+        opacity: 0;
+    }
+    to{
+        left: 0;
+    }
+}
+.background-img p{
+    font-size: 21px;
+    animation: animate2 1s ease;
+}
+
+@keyframes animate2{
+    from{
+        opacity: 0;
+        margin-top: 2%;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
+
+.background-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+   z-index: -1;
+}
+
+.btn-1{
+   font-size: 22px;
+   color: black;
+   background: blueviolet;
+   outline: none;
+   border: none;
+   width: 100px;
+   height: 35px;
+   border-radius: 20px;
+   border-bottom: 2px solid black; 
+   cursor: pointer;
+   animation: animateBtn 1s ease;
+   z-index: 2;
+}
+@keyframes animateBtn{
+    from{
+       
+        opacity: 0;
+        margin-left: 40%;
+    }
+    to{
+        opacity: 1;
+        margin-left: 0;
+    }
+}
+.btn-1:hover{
+    border-top: 2px solid black;
+    border-bottom: 1px solid black;
+}
+
+
+.box{
+    position: absolute;
+    width: 80%;
+    height: 100px;
+    background: white;
+    top: 64%;
+    left: 9%;
+    border-radius: 5px;
+}
+
+.travel{
+    position: absolute;
+    width: 25%;
+    border-right:2px solid black;
+    height: 62%;
+    margin-top: 1.8%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.travel h3{
+    transition: all 0.5s ease;
+    position: absolute;
+   font-size: 17px;
+   left: 5%;
+   top: 0%;
+}
+
+.travel .search1{
+    flex: 1;
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+    color: black;
+    max-width: 150px;
+    background: none;
+
+}
+
+.travel .fa-search{
+    position: absolute;
+    left: 10%;
+    top: 52%;
+}
+
+.Check-in{
+   border-right: 2px solid black;
+   height: 62%;
+   width: 51%;
+   margin-top: 1.8%;
+}
+
+.Check-in h3{
+    position: absolute;
+    left: 34.5%;
+    top: 15%;
+}
+
+.Check-in .date{
+   position: absolute;
+   top: 50%;
+   left: 33%;
+   background: black;
+   color: white;
+   border: none;
+   outline: none;
+}
+
+
+.Check-out{
+    height: 62%;
+    width: 99%;
+    margin-top: 1.8%;
+ }
+ 
+ .Check-out h3{
+     position: absolute;
+     left: 63.7%;
+     top: 15%;
+ }
+ 
+ .Check-out .date2{
+    position: absolute;
+    top: 50%;
+    left: 63%;
+    background: black;
+    color: white;
+    border: none;
+    outline: none;
+ }
+
+ .Check-out .btn-2{
+     position: absolute;
+     left: 83%;
+     top: 25%;
+     height: 50px;
+     font-size: 20px;
+     width: 122px;
+     background: blueviolet;
+     border: none;
+     outline: none;
+     cursor: pointer;
+     border-radius: 5px;
+     transition: all 0.5s ease;
+ }
+
+ .Check-out .btn-2:hover{
+     transform: scale(1.1);
+     color: black;
+     background: white;
+ }
+
+ .cards{
+     max-width: 100%;
+     height: 100px;
+      background: none;
+      margin-top: -5%; 
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+  .card1{
+      width: 250px;
+      height: 300px;
+      margin:0 55px;
+      flex: 1;
+      transition: all 1s ease;
+      cursor: pointer;
+      text-align: center;
+      justify-content: center;
+  }
+
+  .card1 img{
+      width: 50px;
+      height: 39px;
+      margin-top: 8%;
+      margin-left: -5%;
+      background: none;
+      outline: none;
+      z-index: 1;
+  }
+
+  .card1 p{
+      position: relative;
+      top: 7%;
+      font-size: 13px;
+  }
+.card1 h4{
+    font-size: 18px;
+    margin-top: 5%;
+}
+
+.card1:hover{
+    transform: scale(1.2);
+}
+
+
+
+.section-2{
+    position: relative;
+    margin-top: 30%;
+    width: 100%;
+    height: 100vh;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+}
+
+
+.Recomended{
+    position: relative;
+    max-width: 100%;
+    top: 50%;
+    height: 100vh;
+    
+    flex-wrap: wrap;
+
+}
+
+.nav-2{
+    display:flex;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    justify-content: center;
+    padding: 50px 50px 0 100px;
+    flex-wrap: wrap;
+}
+.Recomended ul{
+    flex-wrap: wrap;
+    list-style: none;
+    display: flex;
+}
+.Recomended ul li{
+    margin: 0 17px;
+}
+.Recomended ul:after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: black;
+    margin: 3px ;
+    display: block;
+}
+
+ .under-line{
+    border-bottom: 5px solid black;
+    margin-left: -20px;
+}
+
+.Recomended ul li a{
+    text-decoration: none;
+    font-size: 19px;
+    color: black;   
+}
+
+
+.second-cards{
+    position: relative;
+    top: 12%;
+    width: 99%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    opacity: 0;
+    left: -10%;
+}
+
+.card2{
+    width: 250px;
+    height: 250px;
+    background: white;
+    margin: 37px;
+    flex: 1;
+    transition: all 0.5s ease;
+}
+.card2 img{
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.card2:hover{
+    transform: scale(1.1);
+}
+
+.card2 h1{
+    font-size: 17px;
+}
+.card2 p{
+    position: relative;
+    top: 10%;
+    font-size: 15px;
+}
+
+.card2 p img{
+    height: 23px;
+    width: 23px;
+    position: relative;
+    left: -30%;
+}
+
+.card2  h3{
+    position: relative;
+    font-size: 12px;
+    left: 27%;
+    top: -5%;
+}
+.card2 .p-2{
+    font-size: 13px;
+    position: relative;
+    left: 27%;
+    top:-3%;
+}
+
+
+.cards-3{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    top: 70%;
+    opacity: 0;
+    left: -10%;
+}
+
+.card3{
+    position: relative;
+    max-width: 335px;
+    height: 240px;
+    margin: 17px;
+    flex: 1;
+    border-radius: 11px;
+    transition: all 0.5s ease;
+}
+.card3 img{
+    cursor: pointer;
+   max-width: 100%;
+   height: 100%;
+   border-radius: 9px;
+}
+
+.card3  h3{
+    position: relative;
+    font-size: 15px;
+    left: 2%;
+    top: -1%;
+}
+.card3 .p-3{
+    font-size: 13px;
+    position: relative;
+    left: 2%;
+    top: 5%;
+}
+
+.card3 p img{
+    height: 23px;
+    width: 23px;
+    position: relative;
+    left: -30%;
+}
+.card3 h4{
+    position: relative;
+    left: 30%;
+    top: -10%;
+    font-size: 14px;
+}
+.card3 p{
+    position: relative;
+    top: -7%;
+    left: 30%;
+    font-size: 13px;
+}
+
+.card3:hover{
+    transform: scale(1.1);
+}
+
+.blogs{
+    position: relative;
+    top: 180%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cards-4{
+    position: relative;
+    top: 20%;
+    width: 100%;
+    height: 50px;
+    display: block;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card5{
+    position: relative;
+    flex:1;
+   max-width: 550px;
+   height: 420px;
+}
+
+.card5 img{
+    width: 100%;
+    height: 100%;
+}
+.card4{
+    position: relative;
+    flex: 1;
+    left: 50%;
+    top: -770%;
+    margin: 10px;
+    max-width: 550px;
+    height: 180px;
+    border-radius: 10px;
+}
+
+.blogs h3{
+    position:relative;
+    top: -69%;
+    color: black;
+    font-size: 30px;
+}
+.blogs .h3-1{
+    font-size:45px;
+    color: red;
+}
+.card4 img{
+    border-radius: 3%;
+}
+
+.customers{
+    position: relative;
+    top: 97%;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.customers h1{
+    position: absolute;
+}
+.card-6{
+    position: relative;
+    top: 30%;
+    max-width: 550px;
+    height: 200px;
+    margin: 13px;
+    flex: 1;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.card-6:hover{
+   transform: scale(1.1);
+}
+
+
+.img-text .woman-img{
+    position: absolute;
+    top: 55%;
+   width: 55px;
+   height: 55px;
+}
+.img-text p{
+    position: absolute;
+    left: 15%;
+    top: 59%;
+    font-size: 18px;
+}
+
+footer{
+    position:relative;
+    top: 320%;
+    border-radius: 10px;
+}
+footer nav{
+    background: lightskyblue;
+    border-radius: 10px;
+}
+footer nav p{
+    position: relative;
+    top: 10%;
+    left: -10%;
+}
+footer nav ul li a{
+    font-size: 18px;
+    margin-left: -55%;
+}
+
+footer nav ul li:hover:after{
+    width: 0;
+    background: none;
+}
+.logo{
+    position: relative;
+    width: 70px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.logo img{
+    display: inline-flex;
+    width: 19px;
+    height: 25px;
+    flex: 1;
+    margin: 2.1px;
+}
+
+.logo .facebook:hover{
+    cursor: pointer;
+   transform: scale(1.2);
+}
+.logo .instagram:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+ }
+.logo .Linkedin:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+ }
+
+
+@media(max-width:1200px){
+    .blogs{
+        position: relative;
+        top: 200%;
+    }
+    .blogs .card5{
+        left: 20%;
+    }
+    .blogs .card4{
+        top: 20%;
+        left: 19%;
+
+    }
+   .customers {
+       position: relative;
+       top: 155%;
+   }
+   .customers p{
+       margin-top:5%;
+   }
+   .woman-img img{
+       position: relative;
+       top: 51%;
+   }
+   footer{
+    top: 450%;
+    height: 23vh;
+}
+footer nav{
+    height: 38vh;
+}
+footer nav   p{
+    position: relative;
+    top: -5px;
+}
+}
+
+@media(max-width:1000px){
+    .blogs{
+        position: relative;
+        top: 200%;
+    }
+    .blogs .card5{
+        left: 10%;
+    }
+    .blogs .card4{
+        top: 50%;
+        left: 10%;
+    }
+
+    .customers p{
+        margin-top: 15%;
+    }
+    .woman-img img{
+        position: relative;
+        top: 101%;
+    }
+}
+
+
+
+@media(max-width:920px){
+    .card1{
+        font-size: 13px;
+        flex: 100%;
+    }
+    .Recomended{
+        top: 219%;
+    }
+    .card2{
+        flex: 100%;
+        max-width: 350px;
+        height: 120px;
+        margin: 87px;
+    }
+    .card2 p{
+        position: relative;
+        font-size: 15px;
+        
+    }
+    .card2 h3{
+        position: relative;
+        font-size: 14px;
+        top: -18%;
+    }
+    .card2 .p-2{
+        position: relative;
+        font-size: 11px;
+        top: -17%;
+    }
+
+    .card2 p img{
+        position: relative;
+        margin-top: 2%;
+        left: -35%;
+    }
+    .card3 p{
+        position: relative;
+        top: -21%;
+    }
+    .card3 h4{
+        position: relative;
+        top: -22%;
+    }
+    .cards-3{
+       position: relative;
+       top: 350%;
+    }
+    .card3{
+        height: 130px;
+        max-width: 350px;
+        flex: 100%;
+        margin: 75px;
+    }
+    .blogs{
+        position: relative;
+        top: 600%;
+    }
+    .card5 .h3-1{
+        font-size: 19px;
+    }
+    .blogs h3{
+        font-size: 17px;
+    }
+    .blogs .card4{
+        top: 50%;
+        left: 10%;
+    }
+    .customers{
+        position: relative;
+        top: 157%;
+    }
+    .customers .card-6{
+        flex: 100%;
+        max-width: 590px;
+    }
+    .img-text{
+        position: relative;
+    }
+    .woman-img img{
+        position: relative;
+        top: 15%;
+        width: 37px;
+        height: 38px;
+    }
+    .img-text p{
+        position: absolute;
+        margin-top: 2%;
+        margin-left: -5%;
+        font-size: 15px;
+        color: gray;
+    }
+    footer{
+        top: 880%;
+        height: 23vh;
+    }
+    footer nav{
+        height: 38vh;
+    }
+    footer nav   p{
+        position: relative;
+        top: -5px;
+    }
+}
+@media(max-width:600px){
+    .img-text p{
+        position: relative;
+        margin-top: 3%;
+        left: -17%;
+        font-size: 15px;
+        color: gray;
+    }
+    .woman-img img{
+        position: relative;
+        top: -50%;
+        width: 37px;
+        height: 38px;
+    }
+}
+@media(max-width:320px){
+    .Recomended{
+        top: 255%;
+    }
+    .card2 h3{
+        position: relative;
+        left: 80%;
+        top: -25%;
+    }
+    .card2 .p-2{
+        position: relative;
+        left: 80%;
+        top: -25%;
+    }
+}
+
